@@ -1,9 +1,9 @@
 pipeline {
     agent any
-    tools {
-        jdk 'java17'
-        maven 'maven3'
-    }
+    // tools {
+    //     jdk 'java17'
+    //     maven 'maven3'
+    // }
     // environment {
 	   //  APP_NAME = "register-app-pipeline"
     //         RELEASE = "1.0.0"
@@ -26,20 +26,20 @@ pipeline {
                 }
         }
 
-        stage("Build Application"){
-            steps {
-	        sh "cd CICD"
-                sh "mvn clean package"
-            }
+   //      stage("Build Application"){
+   //          steps {
+	  //       sh "cd CICD"
+   //              sh "mvn clean package"
+   //          }
 
-       }
+   //     }
 
-       stage("Test Application"){
-           steps {
-		 sh "cd CICD"
-                 sh "mvn test"
-           }
-       }
+   //     stage("Test Application"){
+   //         steps {
+		 // sh "cd CICD"
+   //               sh "mvn test"
+   //         }
+   //     }
 
     //    stage("SonarQube Analysis"){
     //        steps {
