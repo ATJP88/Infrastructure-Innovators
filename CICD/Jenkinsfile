@@ -22,12 +22,13 @@ pipeline {
 
         stage("Checkout from SCM"){
                 steps {
-                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/ATJP88/Infrastructure-Innovators.git'
+                    git branch: 'main', credentialsId: 'git', url: 'https://github.com/ATJP88/Infrastructure-Innovators.git'
                 }
         }
 
         stage("Build Application"){
             steps {
+	        sh "cd CICD"
                 sh "mvn clean package"
             }
 
@@ -35,6 +36,7 @@ pipeline {
 
        stage("Test Application"){
            steps {
+		 sh "cd CICD"
                  sh "mvn test"
            }
        }
