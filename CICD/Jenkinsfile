@@ -22,7 +22,7 @@ pipeline {
 
         stage("Checkout from SCM"){
                 steps {
-                    git branch: 'main', credentialsId: 'git', url: 'https://github.com/ATJP88/Infrastructure-Innovators.git'
+                    git branch: 'main', url: 'https://github.com/ATJP88/Infrastructure-Innovators.git'
                 }
         }
 
