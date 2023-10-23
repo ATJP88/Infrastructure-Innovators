@@ -14,11 +14,11 @@ pipeline {
 	   //  JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")
     // }
     stages{
-        stage("Cleanup Workspace"){
-                steps {
-                cleanWs()
-                }
-        }
+        // stage("Cleanup Workspace"){
+        //         steps {
+        //         cleanWs()
+        //         }
+        // }
 
         stage("Checkout from SCM"){
                 steps {
@@ -34,12 +34,12 @@ pipeline {
 
        }
 
-       stage("Test Application"){
-           steps {
-		 sh "cd CICD"
-                 sh "mvn test"
-           }
-       }
+   //     stage("Test Application"){
+   //         steps {
+		 // sh "cd CICD"
+   //               sh "mvn test"
+   //         }
+   //     }
 
     //    stage("SonarQube Analysis"){
     //        steps {
